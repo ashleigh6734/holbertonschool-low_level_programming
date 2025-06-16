@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - entry point
- * description - prints a sentence using printf
- * return always 0 (success)
+ * main - Entry point
+ *
+ * Description: Prints a sentence using printf
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
