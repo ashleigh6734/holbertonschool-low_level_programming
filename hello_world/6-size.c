@@ -1,20 +1,38 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Description: Prints the size of various types on the computer
- * it is compiled and run on.
- *
- * Return: Always 0 (Success)
+ * main - using sizeof
+ * Return: 0 always success
  */
 int main(void)
 {
-    printf("Size of a char: %lu byte(s)\n", sizeof(char));
-    printf("Size of an int: %lu byte(s)\n", sizeof(int));
-    printf("Size of a long int: %lu byte(s)\n", sizeof(long int));
-    printf("Size of a long long int: %lu byte(s)\n", sizeof(long long int));
-    printf("Size of a float: %lu byte(s)\n", sizeof(float));
+/* char and size variables */
+const char *types_array[5] = {
+"char",
+"int",
+"long int",
+"long long int",
+"float"
+};
+int size_array[5] = {
+sizeof(char),
+sizeof(int),
+sizeof(long int),
+sizeof(long long int),
+sizeof(float)
+};
+int i;
 
-    return (0);
+/* Print outcome */
+for (i = 0; i < 5; i++)
+{
+if (i == 1)
+{
+printf("Size of an %s: %zu byte(s)\n", types_array[i], size_array[i]);
+}
+else
+printf("Size of a %s: %zu byte(s)\n", types_array[i], size_array[i]);
+}
+
+return (0);
 }
