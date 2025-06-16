@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - using printf
- * return always 0
+ * main - entry point
+ * description - prints a sentence using printf
+ * return always 0 (success)
  */
 
 int main(void)
