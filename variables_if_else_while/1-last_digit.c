@@ -5,8 +5,7 @@
 /**
  * main - Entry point
  *
- * Description: Generates a random number, extracts its last digit,
- * and prints a message describing that digit.
+ * Description: Last digits
  *
  * Return: Always 0 (Success)
  */
