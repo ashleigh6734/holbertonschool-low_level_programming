@@ -2,7 +2,7 @@
 
 /**
  * main - entry point
- *
+ * description - print alphabet
  * Return: 0 Always success
  */
 
