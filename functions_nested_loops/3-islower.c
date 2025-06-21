@@ -2,7 +2,7 @@
 
 /**
  * main - entry point
- * description - returns 1 if the character is between a and z otherwise returns 0
+ * description - returns 1 if the character is between a and z
  * Return: 1 if lowercase, 0 otherwise
  */
 
