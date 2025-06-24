@@ -7,7 +7,7 @@
  * Return: 0 always success
  */
 
-int _isupper(int c)
+int _isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }
