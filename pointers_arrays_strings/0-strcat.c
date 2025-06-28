@@ -1,30 +1,27 @@
 #include "main.h"
+#include "2-strlen.c"
 
 /**
- * _strcat - concatenates two strings
- * @dest: destination string
- * @src: source string
+ * _strcat - concatenate two stringe
+ * @dest: pointer to string to append to
+ * @src: pointer to the string to be appended
  *
- * Return: pointer to dest
+ * Return: pointer to dest string
  */
+
 char *_strcat(char *dest, char *src)
 {
-    int i = 0;
-    int j = 0;
+	int length = 0, i = 0;
 
-    /* Find the end of dest */
-    while (dest[i] != '\0')
-        i++;
-
-    /* Append src to dest */
-    while (src[j] != '\0')
-    {
-        dest[i] = src[j];
-        i++;
-        j++;
-    }
-
-    dest[i] = '\0'; /* Don't forget to null-terminate */
-
-    return dest;
+	/* get the length of the dest string */
+	length = _strlen(dest);
+	/* add the source string to the end of dest */
+	while (src[i] != '\0')
+	{
+		dest[length + i] = src[i];
+		i++;
+	}
+	/* add back in null byte */
+	dest[length + i] = '\0';
+	return (dest);
 }
