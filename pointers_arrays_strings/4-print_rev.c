@@ -2,23 +2,24 @@
 #include <stdio.h>
 
 /**
- * print_rev - prints a string in reverse, followed by a new line
- * @s: the string to print
+ * print_rev - reverses a string
+ * @s: string to be reversed, provided by main
+ * Return - void
  */
 void print_rev(char *s)
 {
-    int i = 0;
+	int length = 0;
+	int element;
 
-    /* First, find the length of the string */
-    while (s[i] != '\0')
-        i--;
+	/* find array length */
+	while (s[length] != '\0')
+	{
+		length++;
+	}
 
-    /* Then print characters in reverse order */
-    while (i >= 0)
-    {
-        _putchar(s[i]);
-        i--;
-    }
-
-    _putchar('\n');
+	for (element = (length - 1); element >= 0; element--)
+	{
+		_putchar(s[element]);
+	}
+	_putchar('\n');
 }
