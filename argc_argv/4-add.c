@@ -1,21 +1,47 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * main - multiplies two numbers passed as arguments
- * @argc: number of command-line arguments
- * @argv: array of argument strings
+ * main - add numbers
+ * @argc: count of arguments
+ * @argv: pointer to array of arguments
  *
- * Return: 0 on success, 1 if not exactly two arguments are provided
+ * Return: 0 on success
+ * 1 if symbols are provided as arguments
  */
+
 int main(int argc, char *argv[])
 {
-    if (argc != 3)
-    {
-        printf("Error\n");
-        return (1);
-    }
+	int temp, res = 0, i = 1, j = 0;
+	char *str;
 
-    printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
-    return (0);
+	if (argc < 2) /* no args provided other than function name */
+	{
+		printf("0\n");
+		return (0);
+	}
+	else
+	{
+		while (i < argc)
+		{
+			temp = 0;
+			str = argv[i];
+			for (j = 0; str[j] != '\0'; j++)
+			{
+				if (str[j] >= 48 && str[j] <= 57)
+				{
+					temp = temp * 10 + (str[j] - 48);
+				}
+				else
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			res += temp;
+			i++;
+		}
+		printf("%d\n", res);
+		return (0);
+	}
 }
