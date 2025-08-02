@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+#define STDERR_FILENO STDOUT_FILENO
 
 /**
  * main - copies content of one file to another
